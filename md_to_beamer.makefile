@@ -9,7 +9,8 @@ PANDOC=pandoc
 
 PANDOC_OPTIONS=--smart --standalone \
 	       -V theme:Boadilla \
-	       -V colortheme:dove
+	       -V colortheme:dove \
+	       -V fonttheme:serif
 
 %.pdf : %.md
 	$(PANDOC) -t beamer $(PANDOC_OPTIONS) -o $@ $<
