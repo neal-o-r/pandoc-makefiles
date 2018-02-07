@@ -7,7 +7,9 @@ RM=/bin/rm
 
 PANDOC=pandoc
 
-PANDOC_OPTIONS=--smart --standalone
+PANDOC_OPTIONS=--smart --standalone \
+	       -V theme:Boadilla \
+	       -V colortheme:dove
 
 %.pdf : %.md
 	$(PANDOC) -t beamer $(PANDOC_OPTIONS) -o $@ $<
