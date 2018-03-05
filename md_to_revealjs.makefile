@@ -8,7 +8,7 @@ RM=/bin/rm
 PANDOC=pandoc
 
 PANDOC_OPTIONS=-V revealjs-url=http://lab.hakim.se/reveal-js \
-	-V theme="white" \
+	-V theme="simple" \
 	--mathjax
 
 %.html : %.md
