@@ -8,15 +8,14 @@ RM=/bin/rm
 PANDOC=pandoc
 
 PANDOC_OPTIONS=-V revealjs-url=http://lab.hakim.se/reveal-js \
-	-V theme="white" \
-	--mathjax
+	-V theme="simple" \
+	--mathml
 
 %.html : %.md
 	$(PANDOC) -t revealjs $(PANDOC_OPTIONS) -s -o $@ $<
 
 
 # Targets and dependencies
-
 .PHONY: all clean
 
 all : $(EXPORTED_DOCS)
