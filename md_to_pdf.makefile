@@ -10,7 +10,7 @@ PANDOC=pandoc
 
 PANDOC_OPTIONS=--smart --standalone
 
-PANDOC_HTML_OPTIONS=--to html5
+PANDOC_HTML_OPTIONS=--to html5 --mathjax
 PANDOC_PDF_OPTIONS=--from markdown+footnotes
 
 # Pattern-matching Rules
